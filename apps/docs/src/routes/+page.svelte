@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { MyCounterButton } from 'ui';
+  import { MyCounterButton } from 'frontend';
 </script>
 
 <h1>Docs</h1>
