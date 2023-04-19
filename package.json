@@ -9,6 +9,7 @@
     "test:watch": "turbo run test:watch"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "eslint": "^8.0.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "^2.7.1",
