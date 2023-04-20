@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.26.1
+      '@storybook/cli': ^7.0.6
       eslint: ^8.0.0
       eslint-config-custom: workspace:*
       prettier: ^2.7.1
@@ -12,6 +13,7 @@ importers:
       turbo: latest
     devDependencies:
       '@changesets/cli': 2.26.1
+      '@storybook/cli': 7.0.6
       eslint: 8.37.0
       eslint-config-custom: link:libs/eslint-config-custom
       prettier: 2.8.7
@@ -20,30 +22,46 @@ importers:
 
   apps/docs:
     specifiers:
-      '@sveltejs/adapter-auto': latest
-      '@sveltejs/kit': latest
-      eslint-config-custom: workspace:*
+      '@storybook/addon-essentials': ^7.0.6
+      '@storybook/addon-interactions': ^7.0.6
+      '@storybook/addon-links': ^7.0.6
+      '@storybook/blocks': ^7.0.6
+      '@storybook/cli': ^7.0.6
+      '@storybook/svelte': ^7.0.6
+      '@storybook/svelte-vite': ^7.0.6
+      '@storybook/testing-library': ^0.0.14-next.2
+      '@sveltejs/vite-plugin-svelte': ^2.0.3
+      '@tsconfig/svelte': ^4.0.1
       frontend: workspace:*
-      math-helpers: workspace:*
-      svelte: ^3.44.0
-      svelte-check: ^2.7.1
-      svelte-preprocess: ^4.10.6
-      tslib: ^2.3.1
-      typescript: ^4.7.2
-      vite: ^4.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      storybook: ^7.0.6
+      svelte: ^3.57.0
+      svelte-check: ^2.10.3
+      tslib: ^2.5.0
+      typescript: ^5.0.2
+      vite: ^4.3.0
     dependencies:
       frontend: link:../../libs/frontend
-      math-helpers: link:../../libs/math-helpers
     devDependencies:
-      '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.15.7
-      '@sveltejs/kit': 1.15.7_svelte@3.58.0+vite@4.2.1
-      eslint-config-custom: link:../../libs/eslint-config-custom
+      '@storybook/addon-essentials': 7.0.6_biqbaboplfbrettd7655fr4n2y
+      '@storybook/addon-interactions': 7.0.6_biqbaboplfbrettd7655fr4n2y
+      '@storybook/addon-links': 7.0.6_biqbaboplfbrettd7655fr4n2y
+      '@storybook/blocks': 7.0.6_biqbaboplfbrettd7655fr4n2y
+      '@storybook/cli': 7.0.6
+      '@storybook/svelte': 7.0.6_svelte@3.58.0
+      '@storybook/svelte-vite': 7.0.6_zc2knuaro7mzzdsl6fcpghzqoq
+      '@storybook/testing-library': 0.0.14-next.2
+      '@sveltejs/vite-plugin-svelte': 2.0.4_svelte@3.58.0+vite@4.3.0
+      '@tsconfig/svelte': 4.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      storybook: 7.0.6
       svelte: 3.58.0
-      svelte-check: 2.10.3_svelte@3.58.0
-      svelte-preprocess: 4.10.7_aswnnyxiuwffgztcffmr7c7eny
+      svelte-check: 2.10.3_stlc26ck6sdb6pdgmxw6ei6pf4
       tslib: 2.5.0
-      typescript: 4.9.5
-      vite: 4.2.1
+      typescript: 5.0.4
+      vite: 4.3.0
 
   apps/web:
     specifiers:
@@ -2441,6 +2459,47 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/builder-vite/7.0.6_srte2d6s3j2mdssr4liyecdpva:
+    resolution: {integrity: sha512-sXthWQFMKxXS8nqihB5sSyRewLpBJDL3EjwzZxz5/4zQ9XCsuGHMW7DEepX9FMWUNPDIIw3KITs4vMrCNDkXhg==}
+    peerDependencies:
+      '@preact/preset-vite': '*'
+      typescript: '>= 4.3.x'
+      vite: ^3.0.0 || ^4.0.0
+      vite-plugin-glimmerx: '*'
+    peerDependenciesMeta:
+      '@preact/preset-vite':
+        optional: true
+      typescript:
+        optional: true
+      vite-plugin-glimmerx:
+        optional: true
+    dependencies:
+      '@storybook/channel-postmessage': 7.0.6
+      '@storybook/channel-websocket': 7.0.6
+      '@storybook/client-logger': 7.0.6
+      '@storybook/core-common': 7.0.6
+      '@storybook/csf-plugin': 7.0.6
+      '@storybook/mdx2-csf': 1.0.0
+      '@storybook/node-logger': 7.0.6
+      '@storybook/preview': 7.0.6
+      '@storybook/preview-api': 7.0.6
+      '@storybook/types': 7.0.6
+      browser-assert: 1.2.1
+      es-module-lexer: 0.9.3
+      express: 4.18.2
+      fs-extra: 11.1.1
+      glob: 8.1.0
+      glob-promise: 6.0.2_glob@8.1.0
+      magic-string: 0.27.0
+      remark-external-links: 8.0.0
+      remark-slug: 6.1.0
+      rollup: 3.20.2
+      typescript: 5.0.4
+      vite: 4.3.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/channel-postmessage/7.0.6:
     resolution: {integrity: sha512-xBsh/+85GS4bJ08r7z1iRn26EI6hGmMgNpjpFztRigMhsq5SkD9FJb+Nh9bbaHm+yPOCqJcaHQ2aQpuJNT8dHA==}
     dependencies:
@@ -2829,6 +2888,32 @@ packages:
       - vite-plugin-glimmerx
     dev: true
 
+  /@storybook/svelte-vite/7.0.6_zc2knuaro7mzzdsl6fcpghzqoq:
+    resolution: {integrity: sha512-P1h0c0ohJ2qo/q6CojLBUDim1MhAmqaCfZZ22oV2LMt57eledqWwTyfmjwY6Zvp4mYkZn+pTbN3779tbjyNIEQ==}
+    engines: {node: ^14.18 || >=16}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      vite: ^3.0.0 || ^4.0.0
+    dependencies:
+      '@storybook/builder-vite': 7.0.6_srte2d6s3j2mdssr4liyecdpva
+      '@storybook/node-logger': 7.0.6
+      '@storybook/svelte': 7.0.6_svelte@3.58.0
+      '@sveltejs/vite-plugin-svelte': 2.0.4_svelte@3.58.0+vite@4.3.0
+      magic-string: 0.27.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      svelte: 3.58.0
+      sveltedoc-parser: 4.2.1
+      ts-dedent: 2.2.0
+      vite: 4.3.0
+    transitivePeerDependencies:
+      - '@preact/preset-vite'
+      - supports-color
+      - typescript
+      - vite-plugin-glimmerx
+    dev: true
+
   /@storybook/svelte/7.0.6_svelte@3.58.0:
     resolution: {integrity: sha512-tlbT44Fj5NlnYDeeGY4MQZ47VgXWV/JBznXwPz7mGlFIrqKkx5T8zBwG5/r1V2uYhS6m4WS0p8zgimoSNwgFyg==}
     engines: {node: '>=16.0.0'}
@@ -2975,6 +3060,25 @@ packages:
       - supports-color
     dev: true
 
+  /@sveltejs/vite-plugin-svelte/2.0.4_svelte@3.58.0+vite@4.3.0:
+    resolution: {integrity: sha512-pjqhW00KwK2uzDGEr+yJBwut+D+4XfJO/+bHHdHzPRXn9+1Jeq5JcFHyrUiYaXgHtyhX0RsllCTm4ssAx4ZY7Q==}
+    engines: {node: ^14.18.0 || >= 16}
+    peerDependencies:
+      svelte: ^3.54.0
+      vite: ^4.0.0
+    dependencies:
+      debug: 4.3.4
+      deepmerge: 4.3.1
+      kleur: 4.1.5
+      magic-string: 0.30.0
+      svelte: 3.58.0
+      svelte-hmr: 0.15.1_svelte@3.58.0
+      vite: 4.3.0
+      vitefu: 0.2.4_vite@4.3.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@testing-library/dom/8.20.0:
     resolution: {integrity: sha512-d9ULIT+a4EXLX3UU8FBjauG9NnsZHkHztXoIcTsOKoOw030fyjheN9svkTULjJxtYag9DZz5Jz5qkWZDPxTFwA==}
     engines: {node: '>=12'}
@@ -2997,6 +3101,10 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@testing-library/dom': 8.20.0
+    dev: true
+
+  /@tsconfig/svelte/4.0.1:
+    resolution: {integrity: sha512-B+XlGpmuAQzJqDoBATNCvEPqQg0HkO7S8pM14QDI5NsmtymzRexQ1N+nX2H6RTtFbuFgaZD4I8AAi8voGg0GLg==}
     dev: true
 
   /@types/aria-query/5.0.1:
@@ -3148,7 +3256,7 @@ packages:
   /@types/node-fetch/2.6.3:
     resolution: {integrity: sha512-ETTL1mOEdq/sxUtgtOhKjyB2Irra4cjxksvcMUR5Zr4n+PxVhsCD9WS46oPbHL3et9Zde7CNRr+WUNlcHvsX+w==}
     dependencies:
-      '@types/node': 16.18.23
+      '@types/node': 18.15.11
       form-data: 3.0.1
     dev: true
 
@@ -7534,36 +7642,8 @@ packages:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 3.58.0
-      svelte-preprocess: 4.10.7_npuajz43cxy56o54yktkhskv6a
-      typescript: 4.9.5
-    transitivePeerDependencies:
-      - '@babel/core'
-      - coffeescript
-      - less
-      - node-sass
-      - postcss
-      - postcss-load-config
-      - pug
-      - sass
-      - stylus
-      - sugarss
-    dev: true
-
-  /svelte-check/2.10.3_svelte@3.58.0:
-    resolution: {integrity: sha512-Nt1aWHTOKFReBpmJ1vPug0aGysqPwJh2seM1OvICfM2oeyaA62mOiy5EvkXhltGfhCcIQcq2LoE0l1CwcWPjlw==}
-    hasBin: true
-    peerDependencies:
-      svelte: ^3.24.0
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.17
-      chokidar: 3.5.3
-      fast-glob: 3.2.12
-      import-fresh: 3.3.0
-      picocolors: 1.0.0
-      sade: 1.8.1
-      svelte: 3.58.0
-      svelte-preprocess: 4.10.7_aswnnyxiuwffgztcffmr7c7eny
-      typescript: 4.9.5
+      svelte-preprocess: 4.10.7_ukfnd5w3zijje6b4mo3rwt77ei
+      typescript: 5.0.4
     transitivePeerDependencies:
       - '@babel/core'
       - coffeescript
@@ -7584,57 +7664,6 @@ packages:
       svelte: '>=3.19.0'
     dependencies:
       svelte: 3.58.0
-    dev: true
-
-  /svelte-preprocess/4.10.7_aswnnyxiuwffgztcffmr7c7eny:
-    resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
-    engines: {node: '>= 9.11.2'}
-    requiresBuild: true
-    peerDependencies:
-      '@babel/core': ^7.10.2
-      coffeescript: ^2.5.1
-      less: ^3.11.3 || ^4.0.0
-      node-sass: '*'
-      postcss: ^7 || ^8
-      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
-      pug: ^3.0.0
-      sass: ^1.26.8
-      stylus: ^0.55.0
-      sugarss: ^2.0.0
-      svelte: ^3.23.0
-      typescript: ^3.9.5 || ^4.0.0
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      coffeescript:
-        optional: true
-      less:
-        optional: true
-      node-sass:
-        optional: true
-      postcss:
-        optional: true
-      postcss-load-config:
-        optional: true
-      pug:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@types/pug': 2.0.6
-      '@types/sass': 1.45.0
-      detect-indent: 6.1.0
-      magic-string: 0.25.9
-      sorcery: 0.10.0
-      strip-indent: 3.0.0
-      svelte: 3.58.0
-      typescript: 4.9.5
     dev: true
 
   /svelte-preprocess/4.10.7_npuajz43cxy56o54yktkhskv6a:
@@ -7687,6 +7716,58 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.58.0
       typescript: 4.9.5
+    dev: true
+
+  /svelte-preprocess/4.10.7_ukfnd5w3zijje6b4mo3rwt77ei:
+    resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
+    engines: {node: '>= 9.11.2'}
+    requiresBuild: true
+    peerDependencies:
+      '@babel/core': ^7.10.2
+      coffeescript: ^2.5.1
+      less: ^3.11.3 || ^4.0.0
+      node-sass: '*'
+      postcss: ^7 || ^8
+      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
+      pug: ^3.0.0
+      sass: ^1.26.8
+      stylus: ^0.55.0
+      sugarss: ^2.0.0
+      svelte: ^3.23.0
+      typescript: ^3.9.5 || ^4.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      coffeescript:
+        optional: true
+      less:
+        optional: true
+      node-sass:
+        optional: true
+      postcss:
+        optional: true
+      postcss-load-config:
+        optional: true
+      pug:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@babel/core': 7.21.4
+      '@types/pug': 2.0.6
+      '@types/sass': 1.45.0
+      detect-indent: 6.1.0
+      magic-string: 0.25.9
+      sorcery: 0.10.0
+      strip-indent: 3.0.0
+      svelte: 3.58.0
+      typescript: 5.0.4
     dev: true
 
   /svelte/3.58.0:
@@ -8004,7 +8085,6 @@ packages:
     resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
     engines: {node: '>=12.20'}
     hasBin: true
-    dev: false
 
   /uglify-js/3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
@@ -8211,6 +8291,38 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /vite/4.3.0:
+    resolution: {integrity: sha512-JTGFgDh3dVxeGBpuQX04Up+JZmuG6wu9414Ei36vQzaEruY/M4K0AgwtuB2b4HaBgB7R8l+LHxjB0jcgz4d2qQ==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.17.14
+      postcss: 8.4.21
+      rollup: 3.20.2
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /vitefu/0.2.4_vite@4.2.1:
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
@@ -8220,6 +8332,17 @@ packages:
         optional: true
     dependencies:
       vite: 4.2.1
+    dev: true
+
+  /vitefu/0.2.4_vite@4.3.0:
+    resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
+    peerDependencies:
+      vite: ^3.0.0 || ^4.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      vite: 4.3.0
     dev: true
 
   /walker/1.0.8:
