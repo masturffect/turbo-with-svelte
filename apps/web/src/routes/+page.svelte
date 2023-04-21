@@ -1,11 +1,9 @@
 <script lang="ts">
-  import { Button } from 'frontend';
+  import { Card } from 'frontend';
   import { add, subtract } from 'math-helpers';
 </script>
 
-<h1>Web</h1>
-<p>{add(1, 2)}</p>
-<p>{subtract(3, 2)}</p>
-<Button />
-
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Web App</h1>
+<p>Add 1 + 2 = {add(1, 2)}</p>
+<p>Subtract 3 - 2 = {subtract(3, 2)}</p>
+<Card subheader="Card Example" headline="Card Headline" hasButton/>

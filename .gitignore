@@ -15,6 +15,9 @@ coverage
 .DS_Store
 *.pem
 
+#dist
+dist
+
 # storybook 
 storybook-static
 
